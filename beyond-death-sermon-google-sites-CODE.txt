@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beyond Death: Understanding the Eternal Significance of Resurrection</title>
+<meta name="description" content="A KJV digital sermon on the resurrection of Jesus Christ and the believer's hope beyond death, by Charlie M. Saquian, Founder of E Amen.">
+<meta name="author" content="Charlie M. Saquian, Founder of E Amen">
+<!-- Google Sites: Insert > Embed > Embed code > paste all of this > Next > Insert, then drag the box taller. -->
+<style>
+  :root {
+    --accent: #7b1e2b;
+    --accent-dark: #5a1520;
+    --gold: #b8892b;
+    --gold-light: #e9d29a;
+    --paper: #fffdf8;
+    --bg: #f6f0e4;
+    --ink: #2b2420;
+    --muted: #6b5f55;
+    --rule: #e6dccb;
+    --quote-bg: #f8f0dd;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif; font-size: 18px; line-height: 1.75;
+  }
+  a { color: var(--accent); }
+
+  /* ---------- Toolbar: translate + PDF ---------- */
+  .toolbar {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--paper); border-bottom: 1px solid var(--rule);
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .toolbar-inner {
+    max-width: 1180px; margin: 0 auto; padding: 8px 16px;
+    display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between;
+  }
+  .tb-group { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .tb-label { font-size: 13px; color: var(--muted); font-weight: 600; }
+  .btn {
+    font: 600 14px/1 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    padding: 10px 14px; border-radius: 999px; cursor: pointer;
+    border: 1px solid var(--gold); background: transparent; color: var(--ink);
+    display: inline-flex; align-items: center; gap: 6px; text-decoration: none;
+  }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .btn.primary:hover { filter: brightness(1.1); }
+  #google_translate_element { min-height: 34px; display: flex; align-items: center; }
+  .toast {
+    position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%) translateY(20px);
+    background: var(--ink); color: #fff; padding: 10px 16px; border-radius: 8px;
+    font: 14px system-ui, sans-serif; opacity: 0; pointer-events: none; transition: .25s; z-index: 99;
+    max-width: 90vw; text-align: center;
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  /* ---------- Layout: table of contents on the left ---------- */
+  .layout {
+    max-width: 1180px; margin: 0 auto; padding: 24px 16px 64px;
+    display: grid; grid-template-columns: 270px minmax(0, 1fr); gap: 28px; align-items: start;
+  }
+  .toc {
+    position: sticky; top: 64px; max-height: calc(100vh - 80px); overflow: auto;
+    background: var(--paper); border: 1px solid var(--rule); border-radius: 10px;
+    padding: 14px 14px 16px; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .toc summary {
+    font-family: Georgia, serif; font-weight: bold; color: var(--accent); font-size: 1.05em;
+    cursor: pointer; list-style: none; padding-bottom: 8px; border-bottom: 2px solid var(--gold); margin-bottom: 8px;
+  }
+  .toc summary::-webkit-details-marker { display: none; }
+  .toc summary::after { content: " \25BE"; color: var(--gold); }
+  .toc[open] summary::after { content: " \25B4"; }
+  .toc ol { list-style: none; margin: 0; padding: 0; }
+  .toc li { margin: 0; }
+  .toc a {
+    display: block; padding: 6px 8px; border-radius: 6px; text-decoration: none;
+    color: var(--ink); font-size: 14px; line-height: 1.35;
+  }
+  .toc a:hover { background: var(--quote-bg); }
+  .toc .t2 > a { font-weight: 600; color: var(--accent); margin-top: 6px; }
+  .toc .t3 > a { padding-left: 20px; font-size: 13px; color: var(--muted); }
+  .toc a.active { background: var(--quote-bg); box-shadow: inset 3px 0 0 var(--gold); color: var(--ink); }
+  .content { min-width: 0; }
+
+  /* ---------- Sermon ---------- */
+  .hero {
+    background: linear-gradient(160deg, var(--accent-dark), var(--accent) 55%, #8f3a24);
+    color: #fff; border-radius: 12px; padding: 44px 32px 36px; text-align: center;
+    border-bottom: 5px solid var(--gold); margin-bottom: 28px; position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ""; position: absolute; left: 50%; top: -120px; width: 420px; height: 420px; transform: translateX(-50%);
+    background: radial-gradient(circle, rgba(233,210,154,.35), rgba(233,210,154,0) 65%);
+  }
+  .hero > * { position: relative; }
+  .kicker { color: var(--gold-light); letter-spacing: .2em; text-transform: uppercase; font-size: 13px; margin: 0 0 10px; }
+  .hero h1 { margin: 0 0 10px; font-size: 2.2em; line-height: 1.2; }
+  .hero .sub { margin: 0 auto 18px; max-width: 640px; font-style: italic; color: #f5e9d6; }
+  .hero .keyverse {
+    margin: 0 auto 18px; max-width: 680px; padding: 14px 18px; border: 1px solid rgba(233,210,154,.6);
+    border-radius: 8px; font-style: italic; background: rgba(0,0,0,.15);
+  }
+  .hero .keyverse cite { display: block; font-style: normal; color: var(--gold-light); font-size: .85em; margin-top: 6px; }
+  .hero .byline { margin: 0; color: var(--gold-light); font-size: 15px; }
+
+  section { background: var(--paper); border: 1px solid var(--rule); border-radius: 12px; padding: 26px 28px; margin-bottom: 22px; }
+  h2 { color: var(--accent); font-size: 1.5em; line-height: 1.3; margin: 0 0 14px; padding-bottom: 8px; border-bottom: 2px solid var(--gold); }
+  h3 { color: var(--accent-dark); font-size: 1.15em; margin: 24px 0 8px; }
+  h2, h3 { scroll-margin-top: 70px; }
+  p { margin: 0 0 16px; }
+
+  blockquote.kjv {
+    margin: 14px 0 20px; padding: 14px 20px; background: var(--quote-bg);
+    border-left: 5px solid var(--gold); border-radius: 0 8px 8px 0;
+  }
+  blockquote.kjv p { margin: 0 0 6px; font-style: italic; }
+  blockquote.kjv sup { font-style: normal; font-weight: bold; color: var(--accent); font-size: .7em; margin-right: 2px; }
+  blockquote.kjv cite { display: block; font-style: normal; font-weight: bold; color: var(--accent); font-size: .88em; }
+
+  .points { padding-left: 24px; margin: 0 0 16px; }
+  .points li { margin-bottom: 8px; }
+  .callout {
+    background: #fff; border: 1px solid var(--gold); border-radius: 10px; padding: 14px 18px; margin: 16px 0 20px;
+  }
+  .callout strong { color: var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; font-size: .9em; margin: 10px 0 18px; background: #fff; }
+  th { background: var(--accent); color: #fff; text-align: left; padding: 9px 12px; }
+  td { padding: 9px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  tr:nth-child(even) td { background: #fcf7ec; }
+  .table-wrap { overflow-x: auto; }
+
+  .prayer { font-style: italic; }
+  .closing { text-align: center; }
+  .closing .glory { font-weight: bold; color: var(--accent); }
+  .closing .credit { color: var(--gold); font-weight: bold; }
+  .note { font-size: .85em; color: var(--muted); font-style: italic; }
+
+  @media (max-width: 900px) {
+    body { font-size: 17px; }
+    .layout { grid-template-columns: 1fr; gap: 16px; }
+    .toc { position: static; max-height: none; }
+    .hero { padding: 32px 18px 28px; }
+    .hero h1 { font-size: 1.6em; }
+    section { padding: 20px 18px; }
+  }
+  @media print {
+    .no-print, .toc, .toolbar { display: none !important; }
+    body { background: #fff; font-size: 12pt; }
+    .layout { display: block; padding: 0; max-width: none; }
+    section { border: 0; padding: 0; break-inside: auto; }
+    blockquote.kjv { break-inside: avoid; }
+    .hero { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar no-print" role="toolbar" aria-label="Sermon tools">
+  <div class="toolbar-inner">
+    <div class="tb-group">
+      <span class="tb-label">&#127760; Translate:</span>
+      <div id="google_translate_element"></div>
+    </div>
+    <div class="tb-group">
+      <button class="btn primary" id="btnPdf" type="button">&#128196; PDF / Print</button>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<div class="layout">
+
+<details class="toc no-print" id="toc" open>
+  <summary>Table of Contents</summary>
+  <nav aria-label="Table of contents"><ol>
+    <li class="t2"><a href="#top">Title</a></li>
+    <li class="t2"><a href="#intro">Introduction: The Question of the Ages</a></li>
+    <li class="t2"><a href="#s1">I. Resurrection Foreshadowed</a><ol>
+      <li class="t3"><a href="#s1a">Job's confession</a></li>
+      <li class="t3"><a href="#s1b">David and the prophets</a></li>
+      <li class="t3"><a href="#s1c">Abraham on Mount Moriah</a></li>
+    </ol></li>
+    <li class="t2"><a href="#s2">II. Resurrection Fulfilled in Christ</a><ol>
+      <li class="t3"><a href="#s2a">The empty tomb</a></li>
+      <li class="t3"><a href="#s2b">The Triune God in the resurrection</a></li>
+    </ol></li>
+    <li class="t2"><a href="#s3">III. Resurrection Proven by Witnesses</a></li>
+    <li class="t2"><a href="#s4">IV. The Eternal Significance</a><ol>
+      <li class="t3"><a href="#s4a">If Christ be not risen</a></li>
+      <li class="t3"><a href="#s4b">Five things the resurrection secures</a></li>
+    </ol></li>
+    <li class="t2"><a href="#s5">V. Our Resurrection Promised</a><ol>
+      <li class="t3"><a href="#s5a">The dead in Christ shall rise</a></li>
+      <li class="t3"><a href="#s5b">The resurrection body</a></li>
+    </ol></li>
+    <li class="t2"><a href="#s6">VI. Two Resurrections, Two Destinies</a></li>
+    <li class="t2"><a href="#s7">VII. Living Beyond Death Today</a></li>
+    <li class="t2"><a href="#invitation">Invitation</a></li>
+    <li class="t2"><a href="#prayer">Closing Prayer</a></li>
+    <li class="t2"><a href="#index">Scripture Index</a></li>
+  </ol></nav>
+</details>
+
+<main class="content">
+
+<header class="hero" id="top">
+  <p class="kicker">e Amen · Digital Sermon</p>
+  <h1>Beyond Death</h1>
+  <p class="sub">Understanding the Eternal Significance of Resurrection</p>
+  <div class="keyverse">
+    "Jesus said unto her, I am the resurrection, and the life: he that believeth in me, though he were dead, yet shall he live: And whosoever liveth and believeth in me shall never die. Believest thou this?"
+    <cite>John 11:25–26 (KJV)</cite>
+  </div>
+  <p class="byline">Charlie M. Saquian, Founder of E Amen</p>
+</header>
+
+<section>
+  <h2 id="intro">Introduction: The Question of the Ages</h2>
+  <p>Every grave asks the same question. It was asked by a suffering man in the oldest book of the Bible:</p>
+  <blockquote class="kjv"><p><sup>14</sup> If a man die, shall he live again? all the days of my appointed time will I wait, till my change come.</p><cite>Job 14:14 (KJV)</cite></blockquote>
+  <p>Death is not natural to man as God made him. It entered through sin, and it reaches every person born of Adam:</p>
+  <blockquote class="kjv"><p><sup>12</sup> Wherefore, as by one man sin entered into the world, and death by sin; and so death passed upon all men, for that all have sinned:</p><cite>Romans 5:12 (KJV)</cite></blockquote>
+  <blockquote class="kjv"><p><sup>27</sup> And as it is appointed unto men once to die, but after this the judgment:</p><cite>Hebrews 9:27 (KJV)</cite></blockquote>
+  <p>The Bible calls death an enemy, the last one Christ will destroy (1 Corinthians 15:26). Yet the Gospel answers Job's question with a living Person. At the grave of Lazarus, Jesus did not say, "I will teach about the resurrection." He said, "<strong>I am</strong> the resurrection, and the life." The One who spoke to Moses as "I AM THAT I AM" (Exodus 3:14) stood before a tomb and declared that life itself is found in Him.</p>
+  <blockquote class="kjv"><p><sup>20</sup> But now is Christ risen from the dead, and become the firstfruits of them that slept. <sup>21</sup> For since by man came death, by man came also the resurrection of the dead. <sup>22</sup> For as in Adam all die, even so in Christ shall all be made alive.</p><cite>1 Corinthians 15:20–22 (KJV)</cite></blockquote>
+  <p>This sermon traces the resurrection from its first promises to its final fulfilment, and asks what it means for us beyond death.</p>
+</section>
+
+<section>
+  <h2 id="s1">I. Resurrection Foreshadowed in the Old Testament</h2>
+  <p>The resurrection is not a New Testament invention. The saints of old saw it from afar and rested their hope upon it.</p>
+
+  <h3 id="s1a">Job's confession</h3>
+  <blockquote class="kjv"><p><sup>25</sup> For I know that my redeemer liveth, and that he shall stand at the latter day upon the earth: <sup>26</sup> And though after my skin worms destroy this body, yet in my flesh shall I see God: <sup>27</sup> Whom I shall see for myself, and mine eyes shall behold, and not another; though my reins be consumed within me.</p><cite>Job 19:25–27 (KJV)</cite></blockquote>
+  <p>Job expected to see God "in my flesh." His hope was not merely that his soul would survive, but that his body would be raised.</p>
+
+  <h3 id="s1b">David and the prophets</h3>
+  <blockquote class="kjv"><p><sup>10</sup> For thou wilt not leave my soul in hell; neither wilt thou suffer thine Holy One to see corruption.</p><cite>Psalm 16:10 (KJV)</cite></blockquote>
+  <p>Peter preached on the day of Pentecost that David spoke these words of Christ (Acts 2:29–31). The prophets added their witness:</p>
+  <blockquote class="kjv"><p><sup>19</sup> Thy dead men shall live, together with my dead body shall they arise. Awake and sing, ye that dwell in dust: for thy dew is as the dew of herbs, and the earth shall cast out the dead.</p><cite>Isaiah 26:19 (KJV)</cite></blockquote>
+  <blockquote class="kjv"><p><sup>2</sup> And many of them that sleep in the dust of the earth shall awake, some to everlasting life, and some to shame and everlasting contempt.</p><cite>Daniel 12:2 (KJV)</cite></blockquote>
+  <blockquote class="kjv"><p><sup>14</sup> I will ransom them from the power of the grave; I will redeem them from death: O death, I will be thy plagues; O grave, I will be thy destruction: repentance shall be hid from mine eyes.</p><cite>Hosea 13:14 (KJV)</cite></blockquote>
+
+  <h3 id="s1c">Abraham on Mount Moriah</h3>
+  <p>When Abraham laid Isaac on the altar, he believed God could raise the dead. Isaac's return from the altar was a picture of the resurrection to come.</p>
+  <blockquote class="kjv"><p><sup>17</sup> By faith Abraham, when he was tried, offered up Isaac: and he that had received the promises offered up his only begotten son, <sup>18</sup> Of whom it was said, That in Isaac shall thy seed be called: <sup>19</sup> Accounting that God was able to raise him up, even from the dead; from whence also he received him in a figure.</p><cite>Hebrews 11:17–19 (KJV)</cite></blockquote>
+</section>
+
+<section>
+  <h2 id="s2">II. Resurrection Fulfilled in Christ</h2>
+
+  <h3 id="s2a">The empty tomb</h3>
+  <p>What the prophets foretold, the angel announced on the first day of the week:</p>
+  <blockquote class="kjv"><p><sup>5</sup> And the angel answered and said unto the women, Fear not ye: for I know that ye seek Jesus, which was crucified. <sup>6</sup> He is not here: for he is risen, as he said. Come, see the place where the Lord lay.</p><cite>Matthew 28:5–6 (KJV)</cite></blockquote>
+  <p>Paul placed the resurrection at the very heart of the Gospel, "of first importance," alongside the cross itself:</p>
+  <blockquote class="kjv"><p><sup>3</sup> For I delivered unto you first of all that which I also received, how that Christ died for our sins according to the scriptures; <sup>4</sup> And that he was buried, and that he rose again the third day according to the scriptures:</p><cite>1 Corinthians 15:3–4 (KJV)</cite></blockquote>
+  <blockquote class="kjv"><p><sup>24</sup> Whom God hath raised up, having loosed the pains of death: because it was not possible that he should be holden of it.</p><cite>Acts 2:24 (KJV)</cite></blockquote>
+  <p>Death could not hold Him. The risen Lord now holds the keys of death itself:</p>
+  <blockquote class="kjv"><p><sup>18</sup> I am he that liveth, and was dead; and, behold, I am alive for evermore, Amen; and have the keys of hell and of death.</p><cite>Revelation 1:18 (KJV)</cite></blockquote>
+
+  <h3 id="s2b">The Triune God in the resurrection</h3>
+  <p>Scripture shows the Father, the Son, and the Holy Ghost each at work in raising Christ, for "these three are one" (1 John 5:7).</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Who raised Christ?</th><th>Scripture (KJV)</th></tr></thead>
+      <tbody>
+        <tr><td><strong>The Father</strong></td><td>"Christ was raised up from the dead by the glory of the Father" (Romans 6:4)</td></tr>
+        <tr><td><strong>The Son</strong></td><td>"Destroy this temple, and in three days I will raise it up… But he spake of the temple of his body" (John 2:19, 21)</td></tr>
+        <tr><td><strong>The Holy Ghost</strong></td><td>"the Spirit of him that raised up Jesus from the dead" (Romans 8:11)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <blockquote class="kjv"><p><sup>17</sup> Therefore doth my Father love me, because I lay down my life, that I might take it again. <sup>18</sup> No man taketh it from me, but I lay it down of myself. I have power to lay it down, and I have power to take it again. This commandment have I received of my Father.</p><cite>John 10:17–18 (KJV)</cite></blockquote>
+  <p>The resurrection is the Father's seal on the Son's finished work:</p>
+  <blockquote class="kjv"><p><sup>4</sup> And declared to be the Son of God with power, according to the spirit of holiness, by the resurrection from the dead:</p><cite>Romans 1:4 (KJV)</cite></blockquote>
+</section>
+
+<section>
+  <h2 id="s3">III. Resurrection Proven by Witnesses</h2>
+  <p>The Law required two or three witnesses to establish a matter (Deuteronomy 19:15). The resurrection was established by hundreds.</p>
+  <blockquote class="kjv"><p><sup>5</sup> And that he was seen of Cephas, then of the twelve: <sup>6</sup> After that, he was seen of above five hundred brethren at once; of whom the greater part remain unto this present, but some are fallen asleep. <sup>7</sup> After that, he was seen of James; then of all the apostles. <sup>8</sup> And last of all he was seen of me also, as of one born out of due time.</p><cite>1 Corinthians 15:5–8 (KJV)</cite></blockquote>
+  <blockquote class="kjv"><p><sup>3</sup> To whom also he shewed himself alive after his passion by many infallible proofs, being seen of them forty days, and speaking of the things pertaining to the kingdom of God:</p><cite>Acts 1:3 (KJV)</cite></blockquote>
+  <p>He rose bodily, not as a spirit or a vision. He invited His disciples to touch Him:</p>
+  <blockquote class="kjv"><p><sup>39</sup> Behold my hands and my feet, that it is I myself: handle me, and see; for a spirit hath not flesh and bones, as ye see me have.</p><cite>Luke 24:39 (KJV)</cite></blockquote>
+  <div class="callout"><strong>Consider the change in the witnesses.</strong> Frightened men who hid behind locked doors (John 20:19) became bold preachers who faced prison and death for this message. Men do not die for what they know to be false.</div>
+</section>
+
+<section>
+  <h2 id="s4">IV. The Eternal Significance of the Resurrection</h2>
+
+  <h3 id="s4a">If Christ be not risen</h3>
+  <p>Paul asked what would follow if the resurrection were false. His answer leaves no middle ground:</p>
+  <blockquote class="kjv"><p><sup>14</sup> And if Christ be not risen, then is our preaching vain, and your faith is also vain.</p><cite>1 Corinthians 15:14 (KJV)</cite></blockquote>
+  <blockquote class="kjv"><p><sup>17</sup> And if Christ be not raised, your faith is vain; ye are yet in your sins. <sup>18</sup> Then they also which are fallen asleep in Christ are perished. <sup>19</sup> If in this life only we have hope in Christ, we are of all men most miserable.</p><cite>1 Corinthians 15:17–19 (KJV)</cite></blockquote>
+  <p>Without the resurrection, there is no forgiveness, no reunion with the departed saints, and no hope beyond this life. With it, everything changes.</p>
+
+  <h3 id="s4b">Five things the resurrection secures</h3>
+  <ol class="points">
+    <li><strong>Our justification.</strong> The resurrection proves the payment was accepted.
+      <blockquote class="kjv"><p><sup>25</sup> Who was delivered for our offences, and was raised again for our justification.</p><cite>Romans 4:25 (KJV)</cite></blockquote></li>
+    <li><strong>Victory over the fear of death.</strong>
+      <blockquote class="kjv"><p><sup>14</sup> Forasmuch then as the children are partakers of flesh and blood, he also himself likewise took part of the same; that through death he might destroy him that had the power of death, that is, the devil; <sup>15</sup> And deliver them who through fear of death were all their lifetime subject to bondage.</p><cite>Hebrews 2:14–15 (KJV)</cite></blockquote></li>
+    <li><strong>A living hope and a kept inheritance.</strong>
+      <blockquote class="kjv"><p><sup>3</sup> Blessed be the God and Father of our Lord Jesus Christ, which according to his abundant mercy hath begotten us again unto a lively hope by the resurrection of Jesus Christ from the dead, <sup>4</sup> To an inheritance incorruptible, and undefiled, and that fadeth not away, reserved in heaven for you,</p><cite>1 Peter 1:3–4 (KJV)</cite></blockquote></li>
+    <li><strong>A living High Priest who intercedes for us.</strong>
+      <blockquote class="kjv"><p><sup>25</sup> Wherefore he is able also to save them to the uttermost that come unto God by him, seeing he ever liveth to make intercession for them.</p><cite>Hebrews 7:25 (KJV)</cite></blockquote></li>
+    <li><strong>Power for a new life now</strong>, pictured in believer's baptism.
+      <blockquote class="kjv"><p><sup>4</sup> Therefore we are buried with him by baptism into death: that like as Christ was raised up from the dead by the glory of the Father, even so we also should walk in newness of life. <sup>5</sup> For if we have been planted together in the likeness of his death, we shall be also in the likeness of his resurrection:</p><cite>Romans 6:4–5 (KJV)</cite></blockquote></li>
+  </ol>
+</section>
+
+<section>
+  <h2 id="s5">V. Our Resurrection Promised</h2>
+  <p>Christ is "the firstfruits of them that slept" (1 Corinthians 15:20). The firstfruits promise the harvest. Because He rose, all who are His will rise.</p>
+
+  <h3 id="s5a">The dead in Christ shall rise</h3>
+  <blockquote class="kjv"><p><sup>13</sup> But I would not have you to be ignorant, brethren, concerning them which are asleep, that ye sorrow not, even as others which have no hope. <sup>14</sup> For if we believe that Jesus died and rose again, even so them also which sleep in Jesus will God bring with him. <sup>15</sup> For this we say unto you by the word of the Lord, that we which are alive and remain unto the coming of the Lord shall not prevent them which are asleep. <sup>16</sup> For the Lord himself shall descend from heaven with a shout, with the voice of the archangel, and with the trump of God: and the dead in Christ shall rise first: <sup>17</sup> Then we which are alive and remain shall be caught up together with them in the clouds, to meet the Lord in the air: and so shall we ever be with the Lord. <sup>18</sup> Wherefore comfort one another with these words.</p><cite>1 Thessalonians 4:13–18 (KJV)</cite></blockquote>
+  <p>Christians still grieve, but not "as others which have no hope." For the believer, death is called sleep, because waking is certain.</p>
+
+  <h3 id="s5b">The resurrection body</h3>
+  <blockquote class="kjv"><p><sup>42</sup> So also is the resurrection of the dead. It is sown in corruption; it is raised in incorruption: <sup>43</sup> It is sown in dishonour; it is raised in glory: it is sown in weakness; it is raised in power: <sup>44</sup> It is sown a natural body; it is raised a spiritual body. There is a natural body, and there is a spiritual body.</p><cite>1 Corinthians 15:42–44 (KJV)</cite></blockquote>
+  <blockquote class="kjv"><p><sup>51</sup> Behold, I shew you a mystery; We shall not all sleep, but we shall all be changed, <sup>52</sup> In a moment, in the twinkling of an eye, at the last trump: for the trumpet shall sound, and the dead shall be raised incorruptible, and we shall be changed. <sup>53</sup> For this corruptible must put on incorruption, and this mortal must put on immortality. <sup>54</sup> So when this corruptible shall have put on incorruption, and this mortal shall have put on immortality, then shall be brought to pass the saying that is written, Death is swallowed up in victory. <sup>55</sup> O death, where is thy sting? O grave, where is thy victory? <sup>56</sup> The sting of death is sin; and the strength of sin is the law. <sup>57</sup> But thanks be to God, which giveth us the victory through our Lord Jesus Christ.</p><cite>1 Corinthians 15:51–57 (KJV)</cite></blockquote>
+  <blockquote class="kjv"><p><sup>20</sup> For our conversation is in heaven; from whence also we look for the Saviour, the Lord Jesus Christ: <sup>21</sup> Who shall change our vile body, that it may be fashioned like unto his glorious body, according to the working whereby he is able even to subdue all things unto himself.</p><cite>Philippians 3:20–21 (KJV)</cite></blockquote>
+  <blockquote class="kjv"><p><sup>2</sup> Beloved, now are we the sons of God, and it doth not yet appear what we shall be: but we know that, when he shall appear, we shall be like him; for we shall see him as he is.</p><cite>1 John 3:2 (KJV)</cite></blockquote>
+</section>
+
+<section>
+  <h2 id="s6">VI. Two Resurrections, Two Destinies</h2>
+  <p>Every person will be raised. The question is not whether we will live beyond death, but where.</p>
+  <blockquote class="kjv"><p><sup>28</sup> Marvel not at this: for the hour is coming, in the which all that are in the graves shall hear his voice, <sup>29</sup> And shall come forth; they that have done good, unto the resurrection of life; and they that have done evil, unto the resurrection of damnation.</p><cite>John 5:28–29 (KJV)</cite></blockquote>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th></th><th>The resurrection of life</th><th>The resurrection of damnation</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Who</strong></td><td>Those who belong to Christ (1 Corinthians 15:23)</td><td>Those not found in the book of life (Revelation 20:15)</td></tr>
+        <tr><td><strong>Called</strong></td><td>"the first resurrection" (Revelation 20:6)</td><td>"the second death" (Revelation 20:14)</td></tr>
+        <tr><td><strong>Outcome</strong></td><td>"so shall we ever be with the Lord" (1 Thessalonians 4:17)</td><td>"cast into the lake of fire" (Revelation 20:15)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <blockquote class="kjv"><p><sup>6</sup> Blessed and holy is he that hath part in the first resurrection: on such the second death hath no power, but they shall be priests of God and of Christ, and shall reign with him a thousand years.</p><cite>Revelation 20:6 (KJV)</cite></blockquote>
+  <blockquote class="kjv"><p><sup>12</sup> And I saw the dead, small and great, stand before God; and the books were opened: and another book was opened, which is the book of life: and the dead were judged out of those things which were written in the books, according to their works. <sup>13</sup> And the sea gave up the dead which were in it; and death and hell delivered up the dead which were in them: and they were judged every man according to their works. <sup>14</sup> And death and hell were cast into the lake of fire. This is the second death. <sup>15</sup> And whosoever was not found written in the book of life was cast into the lake of fire.</p><cite>Revelation 20:12–15 (KJV)</cite></blockquote>
+  <p>For those who are Christ's, the story ends where death itself ends:</p>
+  <blockquote class="kjv"><p><sup>4</sup> And God shall wipe away all tears from their eyes; and there shall be no more death, neither sorrow, nor crying, neither shall there be any more pain: for the former things are passed away.</p><cite>Revelation 21:4 (KJV)</cite></blockquote>
+</section>
+
+<section>
+  <h2 id="s7">VII. Living Beyond Death Today</h2>
+  <p>The resurrection is not only a hope for the future. It changes how a believer lives this very day.</p>
+  <ol class="points">
+    <li><strong>Set your heart above.</strong>
+      <blockquote class="kjv"><p><sup>1</sup> If ye then be risen with Christ, seek those things which are above, where Christ sitteth on the right hand of God. <sup>2</sup> Set your affection on things above, not on things on the earth.</p><cite>Colossians 3:1–2 (KJV)</cite></blockquote></li>
+    <li><strong>Weigh your trials against eternity.</strong>
+      <blockquote class="kjv"><p><sup>17</sup> For our light affliction, which is but for a moment, worketh for us a far more exceeding and eternal weight of glory; <sup>18</sup> While we look not at the things which are seen, but at the things which are not seen: for the things which are seen are temporal; but the things which are not seen are eternal.</p><cite>2 Corinthians 4:17–18 (KJV)</cite></blockquote></li>
+    <li><strong>Labour without discouragement.</strong>
+      <blockquote class="kjv"><p><sup>58</sup> Therefore, my beloved brethren, be ye stedfast, unmoveable, always abounding in the work of the Lord, forasmuch as ye know that your labour is not in vain in the Lord.</p><cite>1 Corinthians 15:58 (KJV)</cite></blockquote></li>
+    <li><strong>Carry the message.</strong> The risen Christ sent His church to every nation with the authority of His victory (Matthew 28:18–20). The witness of the resurrection belongs on every road, including the digital roads of today's "cyber-nations."</li>
+  </ol>
+</section>
+
+<section>
+  <h2 id="invitation">Invitation</h2>
+  <p>Jesus asked Martha a personal question at the grave of her brother: "Believest thou this?" He asks the same of every reader today. Salvation is promised to all who believe that God raised Him from the dead:</p>
+  <blockquote class="kjv"><p><sup>9</sup> That if thou shalt confess with thy mouth the Lord Jesus, and shalt believe in thine heart that God hath raised him from the dead, thou shalt be saved. <sup>10</sup> For with the heart man believeth unto righteousness; and with the mouth confession is made unto salvation.</p><cite>Romans 10:9–10 (KJV)</cite></blockquote>
+  <ol class="points">
+    <li><strong>Believe</strong> that Christ died for your sins and rose again the third day (1 Corinthians 15:3–4).</li>
+    <li><strong>Confess</strong> Him as Lord, turning from sin to Him (Romans 10:9; Acts 3:19).</li>
+    <li><strong>Follow Him in baptism</strong>, the picture of His death, burial, and resurrection (Romans 6:4; Matthew 28:19).</li>
+    <li><strong>Join a Bible-believing local church</strong>, where you will be taught and cared for (Acts 2:41–42; Hebrews 10:25).</li>
+  </ol>
+  <p>Death is not the end. For the one who believes in Jesus, it is the doorway to the presence of the One who said, "I am the resurrection, and the life."</p>
+</section>
+
+<section>
+  <h2 id="prayer">Closing Prayer</h2>
+  <p class="prayer">Heavenly Father, we thank Thee for the empty tomb and the living Saviour. We praise Thee that Thou didst raise up Jesus Christ our Lord, who was delivered for our offences and raised again for our justification. Lord Jesus, Thou art the resurrection and the life; Thou hast the keys of hell and of death. Holy Ghost, Thou that dwellest in Thy people, quicken us to walk in newness of life.</p>
+  <p class="prayer">Comfort every heart that grieves over a loved one, that they sorrow not as others which have no hope. Open the eyes of every reader who does not yet know Thee, that they may believe and be saved. Make us stedfast, unmoveable, always abounding in Thy work, until the trumpet sounds and we see Thee as Thou art. In the name of Jesus Christ, Amen.</p>
+</section>
+
+<section>
+  <h2 id="index">Scripture Index</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Section</th><th>Passages (KJV)</th></tr></thead>
+      <tbody>
+        <tr><td>Introduction</td><td>Job 14:14; Romans 5:12; Hebrews 9:27; John 11:25–26; Exodus 3:14; 1 Corinthians 15:20–22, 26</td></tr>
+        <tr><td>I. Foreshadowed</td><td>Job 19:25–27; Psalm 16:10; Acts 2:29–31; Isaiah 26:19; Daniel 12:2; Hosea 13:14; Hebrews 11:17–19</td></tr>
+        <tr><td>II. Fulfilled in Christ</td><td>Matthew 28:5–6; 1 Corinthians 15:3–4; Acts 2:24; Revelation 1:18; Romans 6:4; John 2:19–21; Romans 8:11; John 10:17–18; Romans 1:4; 1 John 5:7</td></tr>
+        <tr><td>III. Witnesses</td><td>Deuteronomy 19:15; 1 Corinthians 15:5–8; Acts 1:3; Luke 24:39; John 20:19</td></tr>
+        <tr><td>IV. Significance</td><td>1 Corinthians 15:14, 17–19; Romans 4:25; Hebrews 2:14–15; 1 Peter 1:3–4; Hebrews 7:25; Romans 6:4–5</td></tr>
+        <tr><td>V. Our resurrection</td><td>1 Thessalonians 4:13–18; 1 Corinthians 15:42–44, 51–57; Philippians 3:20–21; 1 John 3:2</td></tr>
+        <tr><td>VI. Two destinies</td><td>John 5:28–29; 1 Corinthians 15:23; Revelation 20:6, 12–15; Revelation 21:4</td></tr>
+        <tr><td>VII. Living today</td><td>Colossians 3:1–2; 2 Corinthians 4:17–18; 1 Corinthians 15:58; Matthew 28:18–20</td></tr>
+        <tr><td>Invitation</td><td>Romans 10:9–10; Acts 3:19; Romans 6:4; Matthew 28:19; Acts 2:41–42; Hebrews 10:25</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="closing">
+  <p class="glory">To God be the glory, in Jesus' name. Amen.</p>
+  <p class="credit">Charlie M. Saquian, Founder of E Amen</p>
+  <p>A digital ministry of the World Center for Christian Trinitarian Movement, Inc.<br>
+    <a href="https://sites.google.com/view/e-amen" target="_blank" rel="noopener">sites.google.com/view/e-amen</a> ·
+    <a href="https://ebsbaptist.online/" target="_blank" rel="noopener">ebsbaptist.online</a></p>
+  <p class="note">All Scripture quotations are from the Authorized (King James) Version.</p>
+</section>
+
+</main>
+</div>
+
+<script>
+/* =========================================================
+   PDF LINK: upload the sermon PDF to Google Drive, set sharing to
+   "Anyone with the link", copy the link, and paste it between the quotes.
+   Example: var PDF_LINK = "https://drive.google.com/file/d/XXXXXXXX/view";
+   ========================================================= */
+var PDF_LINK = "";
+
+function $(id){return document.getElementById(id);}
+function toast(m,ms){var t=$("toast");t.textContent=m;t.classList.add("show");clearTimeout(t._h);t._h=setTimeout(function(){t.classList.remove("show");},ms||4000);}
+
+/* ----- PDF / Print -----
+   Google Sites does not allow printing from inside an embed, so the sermon
+   opens in its own browser tab (your Drive PDF, or a printable copy). */
+$("btnPdf").addEventListener("click", function () {
+  if (PDF_LINK) { window.open(PDF_LINK, "_blank", "noopener"); return; }
+  var doc = "<!DOCTYPE html>" + document.documentElement.outerHTML;
+  doc = doc.replace(/<script[\s\S]*?<\/script>/gi, "")
+           .replace("</body>", "<script>window.onload=function(){setTimeout(function(){window.print();},500);};<\/script></body>");
+  var url = URL.createObjectURL(new Blob([doc], { type: "text/html" }));
+  var w = window.open(url, "_blank");
+  if (!w) { toast("Please allow pop-ups, then press the button again."); return; }
+  toast("The sermon opened in a new tab. Choose “Save as PDF” in the print window (or press Ctrl+P there).", 6000);
+});
+
+/* ----- Table of contents: smooth scroll + highlight current section ----- */
+(function () {
+  var toc = $("toc");
+  if (window.matchMedia("(max-width: 900px)").matches) toc.removeAttribute("open");
+  var links = Array.prototype.slice.call(toc.querySelectorAll("a"));
+  links.forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      var el = document.getElementById(a.getAttribute("href").slice(1));
+      if (!el) return;
+      e.preventDefault();
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (window.matchMedia("(max-width: 900px)").matches) toc.removeAttribute("open");
+    });
+  });
+  if (!("IntersectionObserver" in window)) return;
+  var byId = {}; links.forEach(function (a) { byId[a.getAttribute("href").slice(1)] = a; });
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting && byId[en.target.id]) {
+        links.forEach(function (l) { l.classList.remove("active"); });
+        byId[en.target.id].classList.add("active");
+      }
+    });
+  }, { rootMargin: "0px 0px -70% 0px" });
+  Object.keys(byId).forEach(function (id) { var el = document.getElementById(id); if (el) io.observe(el); });
+})();
+</script>
+
+<!-- ===== Google Translate plugin (official) ===== -->
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({ pageLanguage: "en" }, "google_translate_element");
+}
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
